@@ -30,25 +30,14 @@ function Square() {
       {visible && (
         <Animated.View
           style={{
-            backgroundColor: "red",
             width: 200,
-            height: 200,
-            flexDirection: "row",
-            flexWrap: "wrap",
+            height: 50,
+            backgroundColor: "yellow",
           }}
           exiting={animation
-            .duration(300)
+            .duration(1000)
             .withCallback(() => console.log("callback!"))}
-        >
-          {Array(10000)
-            .fill(0)
-            .map((_, i) => (
-              <View
-                key={i}
-                style={{ backgroundColor: "yellow", width: 2, height: 2 }}
-              />
-            ))}
-        </Animated.View>
+        />
       )}
     </View>
   );
